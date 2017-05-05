@@ -1,11 +1,46 @@
-   <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:id="@+id/sv"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.angel.googlemapdemo.MapsActivity" >
+    tools:context="com.example.angel.googlemapdemo.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"></fragment>
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtLocation"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edtLocation"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/btnCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtLocation"
+            android:layout_marginTop="400dp"
+            android:text="Current Location"
+
+            />
+
+    </RelativeLayout>
 
 
-   </fragment>
+</FrameLayout>
